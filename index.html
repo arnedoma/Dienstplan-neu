@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dienstplan Juli (Vergrößert)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 95vh; /* This ensures the content is centered vertically on most screens */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%; /* Adjust as needed for very wide screens */
+            table-layout: fixed; /* Ensures columns have equal width */
+            font-size: 1.1em; /* Larger base font for better readability */
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px; /* Increased padding for larger cells */
+            text-align: center;
+            white-space: nowrap; /* Prevents wrapping in headers */
+            overflow: hidden; /* Hides overflow in cells if text is too long */
+            text-overflow: ellipsis; /* Adds "..." for overflowed text */
+            min-width: 50px; /* Minimum width for each day cell */
+            height: 40px; /* Set a minimum height for the cells */
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            font-size: 0.9em; /* Slightly smaller for headers to fit date and day */
+        }
+        .weekend {
+            background-color: #ffe0e0; /* Light red for weekends */
+        }
+        .employee-name {
+            font-weight: bold;
+            text-align: left;
+            width: 120px; /* Wider fixed width for employee names */
+            vertical-align: middle; /* Vertically center the employee names */
+        }
+        input[type="text"] {
+            width: calc(100% - 4px); /* Full width minus padding for input */
+            height: 100%; /* Make input fill the cell height */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            border: none;
+            text-align: center;
+            padding: 0; /* Remove padding from input to maximize space */
+            font-size: 1em; /* Good font size for input */
+        }
+        /* Media query for print styles */
+        @media print {
+            body {
+                margin: 0; /* Remove margins for printing */
+                display: block;
+                min-height: auto;
+            }
+            table {
+                width: 100%;
+                font-size: 0.9em; /* Adjust font size for printing */
+                page-break-after: auto;
+            }
+            th, td {
+                padding: 4px; /* Slightly reduced padding for print to fit more */
+                min-width: 40px;
+                height: 35px; /* Adjust height for print */
+            }
+            .employee-name {
+                width: 100px; /* Adjusted width for employee names in print */
+            }
+            input[type="text"] {
+                font-size: 0.9em; /* Adjust input font size for print */
+            }
+            /* Force landscape orientation */
+            @page {
+                size: A4 landscape;
+                margin: 0.5cm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="employee-name">Mitarbeiter</th>
+                <th>1.07<br>Di</th>
+                <th>2.07<br>Mi</th>
+                <th>3.07<br>Do</th>
+                <th>4.07<br>Fr</th>
+                <th class="weekend">5.07<br>Sa</th>
+                <th class="weekend">6.07<br>So</th>
+                <th>7.07<br>Mo</th>
+                <th>8.07<br>Di</th>
+                <th>9.07<br>Mi</th>
+                <th>10.07<br>Do</th>
+                <th>11.07<br>Fr</th>
+                <th class="weekend">12.07<br>Sa</th>
+                <th class="weekend">13.07<br>So</th>
+                <th>14.07<br>Mo</th>
+                <th>15.07<br>Di</th>
+                <th>16.07<br>Mi</th>
+                <th>17.07<br>Do</th>
+                <th>18.07<br>Fr</th>
+                <th class="weekend">19.07<br>Sa</th>
+                <th class="weekend">20.07<br>So</th>
+                <th>21.07<br>Mo</th>
+                <th>22.07<br>Di</th>
+                <th>23.07<br>Mi</th>
+                <th>24.07<br>Do</th>
+                <th>25.07<br>Fr</th>
+                <th class="weekend">26.07<br>Sa</th>
+                <th class="weekend">27.07<br>So</th>
+                <th>28.07<br>Mo</th>
+                <th>29.07<br>Di</th>
+                <th>30.07<br>Mi</th>
+                <th>31.07<br>Do</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="employee-name">Arne</td>
+                <td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="employee-name">Susanne</td>
+                <td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="employee-name">Axel</td>
+                <td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="employee-name">Sarah</td>
+                <td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="employee-name">Sonja</td>
+                <td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="employee-name">Andrea</td>
+                <td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="employee-name">Reserve</td>
+                <td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td class="weekend"><input type="text"></td><td class="weekend"><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
